@@ -4,7 +4,7 @@
 #'
 #' @examples
 #' jsondata <- fromJSON("https://api.github.com/users/hadley/repos")
-#' jsondata %>% summary.doc
+#' jsondata %>% fetch
 #'
 #' @importFrom tibble tibble
 #' @export

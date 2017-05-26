@@ -14,6 +14,6 @@ Print a high-level summary of a data frame from JSON data
 }
 \examples{
 jsondata <- fromJSON("https://api.github.com/users/hadley/repos")
-jsondata \%>\% summary.doc
+jsondata \%>\% fetch
 
 }

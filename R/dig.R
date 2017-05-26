@@ -10,7 +10,7 @@
 #' jsondata <- fromJSON("https://api.github.com/users/hadley/repos", flatten = FALSE)
 #' jsondata %>% dig("owner") %>% dig("type")
 #' jsondata %>% dig("owner", rs= T)
-#' jsondata %>% dig("owner") %>% summary.doc()
+#' jsondata %>% dig("owner") %>% fetch()
 #' @export
 dig <- function(jsondata, keyname, rs = FALSE){
   if (!(keyname %in% names(jsondata))){
