@@ -1,0 +1,19 @@
+Package: JSOmetaN
+Type: Package
+Title: Provide meta-information on JSON array data
+Version: 0.1.0
+Authors: c(
+          person("Sam", "Tyner", , "sctyner@iastate.edu", c("aut", "cre")),
+          person("Katherine", "Scranton", , "kscranton@gmail.com", c("aut", "cre"))
+          )
+Maintainer: Sam Tyner <sctyner@iastate.edu>
+Description: Provides some high-level summary information about JSON array data,
+          including key types, key occurrences in documents, and terminal node information.
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
+Imports: tibble
+Suggests: 
+    jsonlite,
+    dplyr
+RoxygenNote: 6.0.1
