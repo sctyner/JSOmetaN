@@ -1,6 +1,6 @@
 #' Print a high-level summary of a data frame from JSON data
 #'
-#' @param jsondata \code{data.frame} Data frame output from reading a JSON array data into R using \link[jsonlite]{\code{jsonlite::fromJSON}}
+#' @param jsondata \code{data.frame} Data frame output from reading a JSON array data into R using \code{\link[jsonlite]{jsonlite::fromJSON}}
 #'
 #' @examples
 #' jsondata <- fromJSON("https://api.github.com/users/hadley/repos")

@@ -7,7 +7,7 @@
 fetch(jsondata)
 }
 \arguments{
-\item{jsondata}{\code{data.frame} Data frame output from reading a JSON array data into R using \link[jsonlite]{\code{jsonlite::fromJSON}}}
+\item{jsondata}{\code{data.frame} Data frame output from reading a JSON array data into R using \code{\link[jsonlite]{jsonlite::fromJSON}}}
 }
 \description{
 Print a high-level summary of a data frame from JSON data

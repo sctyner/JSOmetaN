@@ -1,6 +1,6 @@
 #' Dig into a JSON data frame.
 #'
-#' @param jsondata \code{data.frame} Data frame output from reading a JSON array data into R using \link[jsonlite]{\code{jsonlite::fromJSON}}.
+#' @param jsondata \code{data.frame} Data frame output from reading a JSON array data into R using \code{\link[jsonlite]{jsonlite::fromJSON}}.
 #' @param keyname \code{character} A key name to dig into \code{jsondata}.
 #' @param rs \code{logical} Short for return summary. Should \code{dig} return the data or a summary of the data?
 #'
