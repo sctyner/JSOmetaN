@@ -6,6 +6,7 @@
 #'
 #' @examples
 #' library(jsonlite)
+#' library(dplyr)
 #' jsondata <- fromJSON("https://api.github.com/users/hadley/repos", flatten = FALSE)
 #' jsondata %>% dig("owner") %>% dig("type")
 #' jsondata %>% dig("owner", rs= T)

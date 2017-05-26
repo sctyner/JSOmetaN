@@ -8,7 +8,7 @@
 #'
 #' @importFrom tibble tibble
 #' @export
-summary.doc <- function(jsondata){
+fetch <- function(jsondata){
   # number of documents
   R <- nrow(jsondata)
   # number of 1st degree keys
