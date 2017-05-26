@@ -16,9 +16,11 @@ dig <- function(jsondata, keyname, rs = FALSE){
   if (!(keyname %in% names(jsondata))){
     stop("Error: Provided key name is not a key in the current level. Keep digging!")
   }
+  dug <- jsondata[,keyname]
+  attr(dug,"my_keyname") <- keyname
   if(rs){
-    summary(jsondata[,keyname])
+    summary(dug)
   } else{
-    jsondata[,keyname]
+    dug
   }
 }

@@ -1,0 +1,41 @@
+---
+title: "README"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+```
+
+
+```{r }
+library(jsonlite)
+library(JSOmetaN)
+library(dplyr)
+```
+
+## Examples
+
+```{r include=TRUE}
+data1 <- fromJSON("https://api.github.com/users/hadley/repos")
+data1 %>% fetch() 
+data1 %>% fetch() %>% dig("owner") %>% fetch()
+
+```
+
+
+```{r include=TRUE}
+citibike <- fromJSON("http://citibikenyc.com/stations/json")
+citibike$stationBeanList %>% fetch()
+```
+
+
+```{r include=TRUE}
+races <- fromJSON("http://ergast.com/api/f1/2012/1/results.json")
+races$MRData$RaceTable$Races %>% fetch() %>% dig("Circuit") %>% fetch %>% dig("Location") %>% fetch()
+```
+
+
+
+

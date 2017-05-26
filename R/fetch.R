@@ -28,10 +28,14 @@ fetch <- function(jsondata){
 
 	docs.per.key <- R - colSums(dummy.json)
 	docs.size <- apply(all.docs.size,2,max)
+	
+	fetched <- tibble(Key = colnames(jsondata) , Doc.count = docs.per.key,
+	                  Class = docs.class, Obj.len = docs.size, Is.terminal = docs.size == 1)
+	attr(fetched,"my_keyname") <- attr(jsondata,"my_keyname")
 
 	# add type of each key, total depth
-	print(tibble(Key = colnames(jsondata) , Doc.count = docs.per.key,
-	       Class = docs.class, Obj.len = docs.size, Is.terminal = docs.size == 1))
+	print(fetched)
+	print(paste("Parent node:",attr(fetched, "my_keyname")))
 
 	# vector to pass to summary.key
 	invisible(jsondata)
